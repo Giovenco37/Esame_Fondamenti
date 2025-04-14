@@ -54,7 +54,7 @@ main{
     font-size: var(--text-big);
     display: inline-block;  /* fa in modo che la classe si restringa in base al suo contenuto */
     z-index: 10;
-    color: white; /* o qualsiasi colore che contrasta con lo sfondo */
+    color: white;
 }
 
 .text-sm {
@@ -78,7 +78,7 @@ main{
 .nav-list-item-button {
     z-index: 10;
     position: relative;
-    background-color: rgba(255, 255, 255, 0.8); /* Sfondo semitrasparente per leggibilità */
+    background-color: rgba(255, 255, 255, 0.8);
     border: none;
     padding: 10px 20px;
     margin: 5px;
