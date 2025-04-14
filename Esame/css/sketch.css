@@ -1,0 +1,126 @@
+:root {
+    --bg-color: rgb(52, 52, 52);
+    --text-color: rgb(0, 0, 0);
+    --link-color: rgb(0, 0, 0);
+
+    --ratio: 1.50;
+    --text-base: 1rem;
+    --text-big: calc(var(--text-base) * var(--ratio));
+    --text-small: calc(var(--text-base) / var(--ratio));
+
+    --spacer: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto Mono';
+    background: var(--bg-color);
+    margin: 0; /* evita che ci sia spazio sopra il canvas */
+    overflow: hidden;
+}
+
+main{
+    position: fixed;
+}
+
+.wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.header {
+    position: relative;
+    padding: 20px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    display: inline-block;
+    background: none;   /* misura di sicurezza per evitare che eventualmente ci sia uno sfondo */
+}
+
+.header-box {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.header-title {
+    font-size: var(--text-big);
+    display: inline-block;  /* fa in modo che la classe si restringa in base al suo contenuto */
+    z-index: 10;
+    color: white; /* o qualsiasi colore che contrasta con lo sfondo */
+}
+
+.text-sm {
+    font-size: var(--text-small);
+}
+
+.nav {
+    position: relative;
+    z-index: 1;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list-item-button {
+    z-index: 10;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8); /* Sfondo semitrasparente per leggibilità */
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Roboto Mono', monospace;
+    list-style: none;
+}
+
+.nav-list-item-button:hover {
+    background-color:#002ead;
+    transition: 0.7s;
+}
+
+.nav-list-item-button:focus {
+    outline-color: transparent;
+    outline-style: solid;
+    box-shadow: 0 0 0 4px #5a01a7;
+    transition: 0.7s;
+}
+
+.nav-list-item-button:active {
+    background-color: #ffbf00;
+}
+
+.info{
+    left: 20px;
+    z-index: 10;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 2;
+    bottom: 0;
+    position: fixed;
+  }
+  
+  .info-list{
+    list-style: none;
+    font-size: var(--text-sm);
+  }
+  
+  .info-title{
+    font-size: var(--text-base);
+   }
