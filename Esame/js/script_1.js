@@ -68,6 +68,6 @@ function mousePressed() {
 
   // Quando waveStrength diminuisce, aggiorniamo il diametro
   if (waveStrength < maxWaveStrength) {
-    maxEllipseDiameter = map(waveStrength, minWaveStrength, maxWaveStrength, 60, 30); // Riduci il diametro man mano che waveStrength diminuisce
+    maxEllipseDiameter = map(waveStrength, minWaveStrength, maxWaveStrength, 60, 30);
   }
 }
