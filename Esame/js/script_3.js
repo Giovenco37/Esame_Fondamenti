@@ -18,7 +18,7 @@ function setup() {
   cnv.position(0, 0);
   cnv.style('z-index', '-1');
   cnv.style('position', 'fixed');
-  noStroke();  // Rimuove la linea esterna
+  noStroke();
   moduleColor = color(0, 0, 0, moduleAlpha);
   r = random(0, 222);
   g = random(0, 16);
@@ -27,15 +27,10 @@ function setup() {
 
 function draw() {
   clear();
-  
-  // Colore di riempimento per le ellissi
-  fill(r, g, b, 100);  // Puoi cambiare questo colore
-  
+  fill(r, g, b, 100);
   for (let gridY = 0; gridY < height; gridY += 25) {
     for (let gridX = 0; gridX < width; gridX += 25) {
       let distanceToCenter = dist(width / 2, height / 2, gridX, gridY);
-      
-      // Effetto ripple: onde concentriche che si propagano dal centro
       let wave = sin(distanceToCenter * rippleSpeed - frameCount * waveFrequency);
       let diameter = map(wave, -1, 1, 5, maxSquareSize);
 
