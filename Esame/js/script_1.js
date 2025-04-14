@@ -13,7 +13,7 @@ function setup() {
   let cnv = createCanvas(windowWidth, windowHeight);
   cnv.position(0, 0);
   cnv.style('z-index', '-1');
-  cnv.style('position', 'fixed'); // così resta ancorato alla finestra
+  cnv.style('position', 'fixed');
   noFill();
   strokeWeight(3);
   moduleColor = color(255, 255, 255, moduleAlpha);
@@ -26,7 +26,7 @@ function draw() {
 }
 
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);  //fa sì che il canvas si adatti alla finestra dell'utente
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 function creaGriglia() {
